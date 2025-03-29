@@ -1,0 +1,65 @@
+# ACLED Project – Conda Environment Setup Guide
+
+This guide explains how to set up a clean and stable environment for running the ACLED ML pipeline,
+especially for users on Windows. We use Python 3.10 to ensure compatibility with NLP libraries 
+like spaCy, which may not fully support newer versions like Python 3.13 yet.
+
+---
+
+1. ✅ Install Anaconda (if not already)
+   Download from: https://www.anaconda.com/download
+   This gives you access to Conda, a robust environment manager.
+
+---
+
+2. 🛠️ Create a New Conda Environment with Python 3.10
+
+   Open the Anaconda Prompt and run:
+
+       conda create -n acled python=3.10
+
+   Then activate the environment:
+
+       conda activate acled
+
+---
+
+3. 📦 Install Required Python Packages
+
+   Navigate to the project folder where `requirements.txt` lives:
+
+       cd path/to/acled_ml
+
+   Then install the dependencies:
+
+       pip install -r requirements.txt
+
+---
+
+4. 🌍 Download the spaCy English Model
+
+   This model powers tokenization and lemmatization for English:
+
+       python -m spacy download en_core_web_sm
+
+---
+
+5. 📚 Register the Conda Environment with Jupyter (Optional but Recommended)
+
+   This allows you to select this environment in Jupyter Notebook:
+
+       pip install ipykernel
+       python -m ipykernel install --user --name=acled --display-name "Python (acled)"
+
+   Now when you launch a notebook, choose the kernel: "Python (acled)"
+
+---
+
+6. 🚀 Launch Jupyter Notebook and Start Working
+
+       jupyter notebook
+
+---
+
+✅ Once set up, your environment is isolated and stable. You're ready to work with spaCy, sklearn, pandas, and the rest of the stack without worrying about compatibility or global Python issues.
+

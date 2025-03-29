@@ -9,3 +9,5 @@ matplotlib
 seaborn
 folium
 scikit-learn
+nltk
+spacy
