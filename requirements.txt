@@ -4,3 +4,7 @@ google-cloud-bigquery
 pyarrow
 pandas-gbq
 python-dotenv
+tdqm
+matplotlib
+seaborn
+folium
