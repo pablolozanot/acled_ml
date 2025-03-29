@@ -8,3 +8,4 @@ tdqm
 matplotlib
 seaborn
 folium
+scikit-learn
